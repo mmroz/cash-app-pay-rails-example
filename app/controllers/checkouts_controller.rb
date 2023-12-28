@@ -81,6 +81,7 @@ class CheckoutsController < ApplicationController
   end
 
   def customer_request_params(checkout)
+    # TODO - update me with the URL
     {
       "idempotency_key": SecureRandom.uuid,
     "actions": [
@@ -92,7 +93,7 @@ class CheckoutsController < ApplicationController
         }
     ],
     "channel": 'IN_PERSON',
-    "redirect_url": "https://b92c-2607-fea8-bca4-a500-1051-9d30-c8a1-84e.ngrok-free.app/checkouts/#{checkout.id}/customer_request_callback"
+    "redirect_url": "http://localhost:3000/checkouts/#{checkout.id}/customer_request_callback"
     }
   end
 end
