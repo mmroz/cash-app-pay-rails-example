@@ -84,16 +84,16 @@ class CheckoutsController < ApplicationController
     # TODO - update me with the URL
     {
       "idempotency_key": SecureRandom.uuid,
-    "actions": [
-      {
-          "amount": checkout_params[:total]&.to_i&. / 100.0,
-          "currency": 'USD',
-          "scope_id": 'BRAND_9t4pg7c16v4lukc98bm9jxyse',
-          "type": 'ONE_TIME_PAYMENT'
-        }
-    ],
-    "channel": 'IN_PERSON',
-    "redirect_url": "http://localhost:3000/checkouts/#{checkout.id}/customer_request_callback"
+      "actions": [
+        {
+            "amount": checkout_params[:total]&.to_i&. / 100.0,
+            "currency": 'USD',
+            "scope_id": 'BRAND_9t4pg7c16v4lukc98bm9jxyse',
+            "type": 'ONE_TIME_PAYMENT'
+          }
+      ],
+      "channel": 'IN_PERSON',
+      "redirect_url": "http://localhost:3000/checkouts/#{checkout.id}/customer_request_callback"
     }
   end
 end
