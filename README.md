@@ -1,7 +1,5 @@
 # cash-app-pay-rails-example
 
-# Installing Cash App Ruby
-
 Add the Cash App Pay gem the `Gemfile`
 
 ```
