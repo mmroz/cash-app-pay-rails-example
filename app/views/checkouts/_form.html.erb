@@ -1,0 +1,22 @@
+<%= form_with(model: checkout) do |form| %>
+  <% if checkout.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(checkout.errors.count, "error") %> prohibited this checkout from being saved:</h2>
+
+      <ul>
+        <% checkout.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :total, style: "display: block" %>
+    <%= form.number_field :total %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_request_id: MyString
+  grant_id: MyString
+  total: 1
+
+two:
+  customer_request_id: MyString
+  grant_id: MyString
+  total: 1

@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @checkout %>
+
+<% if @customer_request&.auth_flow_triggers&.qr_code_svg_url %>
+  <%= image_tag @customer_request.auth_flow_triggers.qr_code_svg_url, height: 300 , width: 400 %>
+<% elsif @customer_request.status == 'APPROVED' %>
+  <%= @customer_request.customer_profile.cashtag %>
+<% end %>
+
+
+<div>
+  <%= link_to "Edit this checkout", edit_checkout_path(@checkout) %> |
+  <%= link_to "Back to checkouts", checkouts_path %>
+
+  <%= button_to "Destroy this checkout", @checkout, method: :delete %>
+</div>
