@@ -1,8 +1,18 @@
 # cash-app-pay-rails-example
 
-Add the Cash App Pay gem the `Gemfile`
+## Run the Example
 
+In the root directory
+
+```sh
+rails s
 ```
+
+## Installing Cash App Ruby
+
+Add the Cash App Pay gem to the `Gemfile`
+
+```sh
 gem 'cash_app_pay' && bundle
 ```
 
@@ -44,7 +54,7 @@ customer_request.auth_flow_triggers.qr_code_svg_url
 
 Render the HTML
 
-```
+```erb
 <%= image_tag @customer_request.auth_flow_triggers.qr_code_svg_url, height: 300 , width: 400 %>
 
 ```
